@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Game Tai Jai</h1>
+        <p>Enter your name</p>
+        <input type="text" id="playerName">
+
+        <button onclick="startGame()">Start Game</button>
+
+    </div>
+
+<!-- startGame Script -->
+    <script>
+        function startGame() {
+            let name = document.getElementById("playerName").value;
+            if (name.trim()==="")
+            {
+                alert("Please enter your name");
+            }
+            else
+            {
+                window.location.href = "game.html?name=" + encodeURIComponent(name);
+            }
+        }
+    </script>
+
+</body>
+</html>
