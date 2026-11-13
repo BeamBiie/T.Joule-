@@ -1,0 +1,191 @@
+/* ================================
+   🐶🐱 DOG & CAT QUIZ THEME
+   Cute Pastel Style
+================================ */
+
+/* ตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tahoma', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #ffe6ec,
+        #fff1d6,
+        #e8f5ff
+    );
+}
+
+/* กล่องหลัก */
+.container {
+    width: 100%;
+    max-width: 550px;
+    padding: 40px 30px;
+
+    background: #fffdf9;
+    border-radius: 30px;
+
+    box-shadow: 0 15px 40px rgba(160, 120, 100, 0.15);
+
+    text-align: center;
+    border: 3px solid #ffffff;
+
+    animation: fadeIn 0.7s ease;
+}
+
+/* หัวข้อ */
+h1 {
+    color: #e88da5;
+    font-size: 38px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: #795548;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+/* ข้อความแสดงลำดับคำถาม */
+#progress {
+    color: #c49a8c;
+    font-size: 14px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* กล่องคำตอบ */
+#answers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ปุ่มคำตอบ */
+button {
+    width: 100%;
+    padding: 16px 20px;
+
+    border: 2px solid #f5c6d0;
+    border-radius: 18px;
+
+    background: #fff0f3;
+    color: #795548;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+/* เอฟเฟกต์เมื่อเอาเมาส์ชี้ */
+button:hover {
+    background: #ffdce5;
+    border-color: #ed9eb2;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 7px 15px rgba(232, 141, 165, 0.2);
+}
+
+/* เอฟเฟกต์เมื่อกดปุ่ม */
+button:active {
+    transform: scale(0.97);
+}
+
+/* กล่องผลลัพธ์ */
+#result {
+    animation: fadeIn 0.6s ease;
+}
+
+#resultTitle {
+    color: #e88da5;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* รูปภาพผลลัพธ์ */
+#resultImage {
+    width: 100%;
+    max-width: 300px;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+    border: 5px solid #ffe1e9;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 8px 20px rgba(150, 100, 100, 0.15);
+}
+
+/* คำอธิบายผลลัพธ์ */
+#resultText {
+    color: #92766d;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* ปุ่มเริ่มใหม่ */
+#result button {
+    background: #f5a9bd;
+    color: white;
+    border: none;
+}
+
+#result button:hover {
+    background: #e88da5;
+}
+
+/* ซ่อนองค์ประกอบ */
+.hidden {
+    display: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* รองรับมือถือ */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 14px;
+    }
+}
